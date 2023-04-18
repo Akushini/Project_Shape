@@ -30,7 +30,12 @@ namespace ConsoleApp1
             double triangleArea = triangle.Area();
             Console.WriteLine("L'aire du triangle est : " + triangleArea);
 
-            Shape[] arrShapes = new Shape[] { rectangle, circle, square, triangle };
+            Hexagonal hexagone = new Hexagonal();
+            hexagone.Height = 7;
+            double hexagoneArea = hexagone.Area();
+            Console.WriteLine("L'aire de l'hexagone est : " + hexagoneArea);
+
+            Shape[] arrShapes = new Shape[] { rectangle, circle, square, triangle, hexagone };
             AreaCalculator calculator = new AreaCalculator();
             double totalArea = calculator.TotalArea(arrShapes);
 
